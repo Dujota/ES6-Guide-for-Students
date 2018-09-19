@@ -81,7 +81,6 @@ console.log(filteredNumbers);
  * Parctice Ex # 2
  * find only the users that have admin rights
  */
-
 var users = [
   { id: 1, admin: true },
   { id: 2, admin: false },
@@ -91,3 +90,22 @@ var users = [
  ];
  var filteredUsers = users.filter( user => user.admin)
  console.table(filteredUsers);
+
+/*
+  * CHALLENGE - Implement reject!
+  * create a reject function that does the opposite of the filter (if func returns true, exclude item from the new array)
+  * var nums = [10,20,30]
+  * var lessThanTwenty = reject(nums, fucntion(num){return num > 15})  --- > logs [10]
+*/
+var numbers = [10,20,30]
+
+function reject (array, iteratorFunction) {
+  return array.filter(element => {
+    return !iteratorFunction(element)
+  })
+}
+var lessThanTwenty = reject(numbers, number => {return number > 15})
+
+console.log(lessThanTwenty);
+
+
