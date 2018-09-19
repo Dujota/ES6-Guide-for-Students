@@ -98,5 +98,16 @@ console.log(account);
  * a very common operation is to an object that has a given prop
  * create a shorthand to refactor this common operaion
  * ex: findWhere(ladders, {height: '20 feet'});
- * the object {ladders: '20 feet'} shold be used as the search parameter - basically find the ladder who's height is aprx 20 feet
+ * the object {ladders: '20'} should be used as the search parameter - basically find the ladder who's height is aprx 20 feet
+ * expected outcome: var ladders =
  */
+
+ var ladders = [
+   {id: 1, height: 20},
+   {id: 1, height: 25},
+ ]
+
+ function findWhere(array, criteria) {
+
+}
+
