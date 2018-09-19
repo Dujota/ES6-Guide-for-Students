@@ -45,3 +45,26 @@ var filterUseCase = products.filter( product => {
 console.log('--------------------');
 console.table(filterUseCase);
 
+
+/*
+ USE CASE # 3  -- blog app or form, where posts can have multiple comments and we want to see all comments associated with a specific post
+ */
+
+var post = {id: 4, title: "This is my New blog Post"}
+
+var comments = [
+  {postID: 4, content: 'Great post!'},
+  {postID: 3, content: 'Good idea, maybe I will try it'},
+  {postID: 4, content: 'Wow, thank you so much'},
+]
+
+// make a function that accepts the post and the comments array so we can compare and create the boolean for the filter
+function commentsForPosts(post, comments) {
+  return comments.filter(comment => comment.postID === post.id) // we access a post's id and filter out any comment that has the foreign key of the post id
+}
+
+console.log("Below is the filtered list for the comments based on their relation");
+console.table(commentsForPosts(post, comments))
+
+console.log('------------------------------------------------------');
+
