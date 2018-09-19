@@ -99,15 +99,25 @@ console.log(account);
  * create a shorthand to refactor this common operaion
  * ex: findWhere(ladders, {height: '20 feet'});
  * the object {ladders: '20'} should be used as the search parameter - basically find the ladder who's height is aprx 20 feet
- * expected outcome: var ladders =
+ * findWhere(ladders, {height:25}); --> returns{id:3, height: 25}
+ *
+ * HINT - Hard part is figuring out what the name of the prop is on criteria ,  you can use Object.keys(criteria)[0] to
+
  */
 
  var ladders = [
    {id: 1, height: 20},
-   {id: 1, height: 25},
+   {id: 2, height: 40},
+   {id: 3, height: 25}
  ]
 
  function findWhere(array, criteria) {
-
+   property = Object.keys(criteria)[0] // check the mdn docs for explanation
+  return array.find(
+    element => {
+      return element[property] === criteria[property]
+    }
+  )
 }
 
+console.log(findWhere(ladders, {height:25}))
