@@ -66,5 +66,4 @@ images.forEach(function(image) {
     image.height * image.width
   )
 });
-
-console.log(areas);
+console.table(areas);
