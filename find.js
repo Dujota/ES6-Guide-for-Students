@@ -62,3 +62,23 @@ function postForComments (posts, comment) {
 }
 console.log(postForComments(posts, comment))
 // most use cases are for when you are looking for a specific item out of a collection
+
+
+/**
+ * USE CASES ? ---> lets say you have an index, and a user clicks on a single post, that redirects to a show page, based on the url which has the post id, then you wold go to the list of posts and then find the specific one with the params id === posts.id
+ */
+
+
+ /**
+  * PRACTICE EXERCISES!!!
+  */
+
+  // find the admin
+ var users = [
+  { id: 1, admin: false },
+  { id: 2, admin: false },
+  { id: 3, admin: true }
+];
+
+var admin = users.find(user => user.admin)
+console.log(admin);
