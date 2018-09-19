@@ -26,3 +26,22 @@ console.table(filteredProducts);
 // ES6 version of the filter method
 var filtered = products.filter(product => product.type === "formal")
 console.table(filtered);
+
+// Example # 2
+var products = [
+  {name: "glasses", type: "casual", quantity: 0, price: 1 },
+  {name: "button shirt", type: "formal", quantity: 10, price: 14},
+  {name: "t-shirt", type: "casual", quantity: 7, price: 8},
+  {name: "suit", type: "formal", quantity: 17, price: 150}
+];
+
+// show me casual clothing that is in stock that is less than $10
+var filterUseCase = products.filter( product => {
+  return product.type === "casual"
+  && product.quantity > 0
+  && product.price < 10
+})
+
+console.log('--------------------');
+console.table(filterUseCase);
+
