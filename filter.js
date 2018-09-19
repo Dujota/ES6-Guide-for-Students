@@ -100,12 +100,12 @@ var users = [
 var numbers = [10,20,30]
 
 function reject (array, iteratorFunction) {
-  return array.filter(element => {
-    return !iteratorFunction(element)
-  })
+  // generic function that accepts a callback and then passes that callback as the conditional for the logic in the filter
+
+  // need return statement inside the first block as there are parenthesis and we need the return keyword in a block
+  return array.filter(element =>  !iteratorFunction(element))
 }
 var lessThanTwenty = reject(numbers, number => {return number > 15})
-
 console.log(lessThanTwenty);
 
 
