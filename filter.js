@@ -73,9 +73,21 @@ console.table(commentsForPosts(post, comments))
  Practice Ex # 1
  return any number greater than 50 in a new array
  */
-
 var numbers = [15, 25, 35, 45, 55, 65, 75, 85, 95];
-
 var filteredNumbers = numbers.filter(num => num > 50)
-
 console.log(filteredNumbers);
+
+/**
+ * Parctice Ex # 2
+ * find only the users that have admin rights
+ */
+
+var users = [
+  { id: 1, admin: true },
+  { id: 2, admin: false },
+  { id: 3, admin: false },
+  { id: 4, admin: false },
+  { id: 5, admin: true },
+ ];
+ var filteredUsers = users.filter( user => user.admin)
+ console.table(filteredUsers);
