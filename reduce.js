@@ -100,4 +100,16 @@ var desks = [
   { type: 'standing' }
 ];
 
-var deskTypes = desks.reduce(function() {}, { sitting: 0, standing: 0 });
+var deskTypes = desks.reduce(
+  function(accumulator, desk) {
+    if (desk.type === 'sitting') {
+      ++accumulator.sitting;
+    } else {
+      ++accumulator.standing;
+    }
+    return accumulator;
+  },
+  { sitting: 0, standing: 0 }
+);
+
+console.log(deskTypes);
