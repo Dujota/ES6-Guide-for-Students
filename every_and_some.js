@@ -97,5 +97,20 @@ if (validated) {
   // show an error message to user
 }
 
+console.log('--------------------------------------------');
 
 // PRACTICE EXAMPLES!!!!!!
+/**
+ * EX # 1
+ * find out if every user has submitted the request form
+ */
+
+var users = [
+  { id: 21, hasSubmitted: true },
+  { id: 62, hasSubmitted: false },
+  { id: 4, hasSubmitted: true }
+];
+
+var hasSubmitted = users.every(user => user.hasSubmitted)
+console.log(hasSubmitted);
+console.log('--------------------------------------------');
