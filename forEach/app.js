@@ -46,5 +46,25 @@ function handlePosts() {
   });
 }
 
+// EX2 - Processing Values
+/**
+ The array below contains an array of objects representing an image,. Using forEach, calculate the area of each image and store that in a new array
+ */
+
+// Starter code
+var images = [
+  { height: 10, width: 30 },
+  { height: 20, width: 90 },
+  { height: 54, width: 32 }
+];
+var areas = [];
 
 
+// Solution
+images.forEach(function(image) {
+  areas.push(
+    image.height * image.width
+  )
+});
+
+console.log(areas);
