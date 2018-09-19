@@ -96,3 +96,6 @@ if (validated) {
 } else {
   // show an error message to user
 }
+
+
+// PRACTICE EXAMPLES!!!!!!
