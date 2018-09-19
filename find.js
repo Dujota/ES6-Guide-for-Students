@@ -82,3 +82,21 @@ console.log(postForComments(posts, comment))
 
 var admin = users.find(user => user.admin)
 console.log(admin);
+
+//Practice # 2 -> find the account with balance of 12
+var accounts = [
+  { balance: -10 },
+  { balance: 12 },
+  { balance: 0 }
+];
+
+var account = accounts.find(account => account.balance >= 12)
+console.log(account);
+
+/**
+ *  Practice #3 - CHALLENGE!
+ * a very common operation is to an object that has a given prop
+ * create a shorthand to refactor this common operaion
+ * ex: findWhere(ladders, {height: '20 feet'});
+ * the object {ladders: '20 feet'} shold be used as the search parameter - basically find the ladder who's height is aprx 20 feet
+ */
