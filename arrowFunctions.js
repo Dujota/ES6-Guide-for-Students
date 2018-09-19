@@ -54,4 +54,4 @@ const team = {
 
 console.log(team.teamSummary());
 
-// what is going on? Lexical this --> broken down lexical = the placement of this term depends on how its interpreted/evaluated,
+// what is going on? Lexical this --> broken down lexical = the placement of this term depends on how its interpreted/evaluated, arrow functions make the this keyword behave exactly what we expect it to be
