@@ -57,5 +57,20 @@ var trips = [
   { distance: 59, time: 25 }
 ];
 
-var speeds;
+var speeds = trips.map(trip => trip.distance/trip.time)
+console.log(speeds);
 
+
+/*
+EX 3 - CHALLENGE - implementing a pluck
+make a pluck function that accepts an array and a string that represents a property name and returns an array containing that prop for each object
+
+ex: var people = [{name: 'john'}, {name: 'jane'}]
+pluck(people, 'name'); --> returns ['john', 'jane']
+*/
+
+
+function pluck(array, property) {
+ return array.map( element => element[property]) // make sure to return the computed value
+}
+console.log(pluck(trips, "time"))
