@@ -122,7 +122,42 @@ console.log(deskTypes);
  */
 
 var numbers = [1, 1, 2, 3, 4, 4];
+/*
+function unique(array) {
+  // step 1, set up the reduce statement
+  // step 2 check the accumulator if the current element exists?
+  //step 3 if the number exists in the accumulator, then dont add it else just return the accumulator
+  // step 4 return the final accumulator array
+
+  array.reduce((accumulator, element) => {
+    if (!accumulator.find(num => num === element)) {
+      accumulator.push(element);
+    } else {
+      accumulator;
+    }
+    return accumulator;
+  }, []);
+}
+*/
 
 function unique(array) {
-  array.reduce((accumulator, element) => {}, []);
+  return array.reduce((accumulator, element) => {
+    if (accumulator.find(num => num === element)) {
+      return accumulator;
+    } else {
+      accumulator.push(element);
+    }
+    return accumulator;
+  }, []);
 }
+
+// using ternerary operator and arrow functions
+var uniqueRefactored = array =>
+  array.reduce((newList, number) => {
+    !newList.find(i => i === number) ? newList.push(number) : newList;
+    return newList;
+  }, []);
+
+console.log(uniqueRefactored(numbers));
+
+console.log(unique(numbers));
