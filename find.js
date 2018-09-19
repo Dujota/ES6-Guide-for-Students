@@ -24,5 +24,41 @@
 es6User = users.find(user => {
   return user.name === 'john'
 })
-
 console.log("ES6", es6User);
+
+/**
+ * example 2 - find specific criteria in a collection
+ */
+
+ // using fucntion constructors
+ function Car(model) {
+   this.model = model
+ }
+
+ // create an array using the Car constructor for objects
+ var cars = [
+   new Car('X3'),
+   new Car('Focus'),
+   new Car('Corvette')
+ ]
+
+ filteredCards = cars.find(car => car.model === 'X3')
+ console.log(filteredCards);
+
+ /**
+  * Ex 2, re-use the posts array but we will hbave a single comment that has a post
+  */
+
+var posts =  [
+  {id: 1, title: "First post"},
+  {id: 2, title: "Second post"},
+]
+
+comment = {postId:1, content:"So cool! "}
+
+// takes a big list of postas and a single comments and find the post with a particular id
+function postForComments (posts, comment) {
+  return posts.find(post => post.id === comment.postId)
+}
+console.log(postForComments(posts, comment))
+// most use cases are for when you are looking for a specific item out of a collection
