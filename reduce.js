@@ -32,3 +32,45 @@ color = primaryColors.reduce(function(previous, primaryColor) {
   return previous; // then return the accumilator/previous value change
 }, []);
 console.log(color);
+
+/**
+ * Example 3 - interview questions with reduce - ACE THAT INTERVIEW!!!!
+ * The balanced parans question
+ */
+
+// Given a string with some # of paranthesis, return true/false if the expression is balanced
+
+/**
+ * Steps: 1 - make a counter to keep track of the parens
+ *  +1 if open parens
+ * -1 if closing parens
+ * return the counter if any char != parens
+ * turn statement to boolean by adding ! to the front of it (positive/negative # as truthy and 0 as falsey )
+ * finally catch the edgecase where the parens are flipped
+ */
+
+function balancedParens(string) {
+  return !string.split('').reduce((prev, char) => {
+    if (prev < 0) {
+      return prev;
+    } // needs to be ontop otherwise it will always be 0 at )()
+
+    if (char === '(') {
+      return ++prev;
+    }
+
+    if (char === ')') {
+      return --prev;
+    }
+
+    return prev; // we want to still return the coutner just in casse there is a char that doesnt meet the if statementsimport {  } from "module";
+  }, 0); // lets make a counter, where we will increase if open parens and decrease if closed parens
+}
+
+console.log(balancedParens('((((')); // false
+console.log(balancedParens('()')); // true
+console.log(balancedParens(')(')); // false
+
+/**
+ * REDUCE EXERCISES!!!!!!
+ */
