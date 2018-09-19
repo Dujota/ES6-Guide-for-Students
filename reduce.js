@@ -123,4 +123,6 @@ console.log(deskTypes);
 
 var numbers = [1, 1, 2, 3, 4, 4];
 
-function unique(array) {}
+function unique(array) {
+  array.reduce((accumulator, element) => {}, []);
+}
