@@ -74,3 +74,13 @@ console.log(balancedParens(')(')); // false
 /**
  * REDUCE EXERCISES!!!!!!
  */
+
+// Ex 1, sum of all the distance travelled
+
+var trips = [{ distance: 34 }, { distance: 12 }, { distance: 1 }];
+
+var totalDistance = trips.reduce((sum, trip) => {
+  return (sum += trip.distance);
+}, 0);
+
+console.log(totalDistance);
