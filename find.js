@@ -18,8 +18,11 @@
      break;
    }
  }
- console.log(user);
+ console.log("ES5", user);
 
  // ES6 Find helper
+es6User = users.find(user => {
+  return user.name === 'john'
+})
 
-
+console.log("ES6", es6User);
