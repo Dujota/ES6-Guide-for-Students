@@ -14,5 +14,15 @@
  // ES5 Way of how the filter works
  var filteredProducts = []
  for (var i = 0; i < products.length; i++) {
-   products[i]
+   if (products[i].type === "casual"){
+     filteredProducts.push(products[i])
+   }
  }
+console.table(filteredProducts);
+
+// this is an exact case of why we do not mutate an original array as the filter should only display a modified version of the original array, instead of removing the  records from the db -- we want to create a subset of values
+
+
+// ES6 version of the filter method
+var filtered = products.filter(product => product.type === "formal")
+console.table(filtered);
