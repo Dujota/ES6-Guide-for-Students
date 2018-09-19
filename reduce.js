@@ -113,3 +113,14 @@ var deskTypes = desks.reduce(
 );
 
 console.log(deskTypes);
+
+/**
+ * CHALLENGE: Unique Helper
+ * create a func called unique which removed all dupes from an array
+ * ex: var numbers = [1,1,2,3,4,4] ---> return would be [1,2,3,4]
+ * HINT: we will combine reduce and find helpers !!
+ */
+
+var numbers = [1, 1, 2, 3, 4, 4];
+
+function unique(array) {}
