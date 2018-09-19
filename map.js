@@ -32,3 +32,17 @@ var prices = cars.map(car =>{
 console.log(prices);
 
 // The primary goal of most web apps are just rendering lists of data, this is why map is the most popular used array helper because it does not mutate any data.
+
+// Practice Ex#1
+
+/*
+ Plucking Values : create a new array that has the height property for each obj,
+ */
+
+ var images = [
+   {height: '34px', width: '39px'},
+   {height: '54px', width: '22px'},
+   {height: '140px', width: '123px'},
+ ]
+var heights = images.map(image =>image.height)
+console.log(heights);
