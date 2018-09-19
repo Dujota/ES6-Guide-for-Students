@@ -117,6 +117,7 @@ console.log('--------------------------------------------');
 
 /**
  * EX # 2
+ * given the list of network requests, confirm if any have the status pending
  */
 
 var requests = [
@@ -125,4 +126,6 @@ var requests = [
   { url: '/users', status: 'failed' }
 ];
 
-var inProgress;
+var inProgress = requests.some(req => req.status === "pending")
+
+console.log(inProgress);
