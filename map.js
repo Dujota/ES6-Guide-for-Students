@@ -46,3 +46,16 @@ console.log(prices);
  ]
 var heights = images.map(image =>image.height)
 console.log(heights);
+
+/*
+Practice ex #2
+ create an array that has the speed for each trip.
+*/
+var trips = [
+  { distance: 34, time: 10 },
+  { distance: 90, time: 50 },
+  { distance: 59, time: 25 }
+];
+
+var speeds;
+
