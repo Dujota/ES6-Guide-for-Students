@@ -114,3 +114,15 @@ var users = [
 var hasSubmitted = users.every(user => user.hasSubmitted)
 console.log(hasSubmitted);
 console.log('--------------------------------------------');
+
+/**
+ * EX # 2
+ */
+
+var requests = [
+  { url: '/photos', status: 'complete' },
+  { url: '/albums', status: 'pending' },
+  { url: '/users', status: 'failed' }
+];
+
+var inProgress;
