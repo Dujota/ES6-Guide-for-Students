@@ -67,9 +67,9 @@ function balancedParens(string) {
   }, 0); // lets make a counter, where we will increase if open parens and decrease if closed parens
 }
 
-console.log(balancedParens('((((')); // false
-console.log(balancedParens('()')); // true
-console.log(balancedParens(')(')); // false
+console.log('((((', balancedParens('((((')); // false
+console.log('()', balancedParens('()')); // true
+console.log(')(', balancedParens(')(')); // false
 
 /**
  * REDUCE EXERCISES!!!!!!
@@ -82,5 +82,22 @@ var trips = [{ distance: 34 }, { distance: 12 }, { distance: 1 }];
 var totalDistance = trips.reduce((sum, trip) => {
   return (sum += trip.distance);
 }, 0);
-
+console.log('----------');
 console.log(totalDistance);
+console.log('----------');
+
+/**
+ * Example 2 - crete an obj that tracks tge # of sittings and standing desks.
+ * should have hte form {sutting: #, standing: #}
+ * HINT:: Dont forget to return the accumulator object
+ */
+
+var desks = [
+  { type: 'sitting' },
+  { type: 'standing' },
+  { type: 'sitting' },
+  { type: 'sitting' },
+  { type: 'standing' }
+];
+
+var deskTypes = desks.reduce(function() {}, { sitting: 0, standing: 0 });
