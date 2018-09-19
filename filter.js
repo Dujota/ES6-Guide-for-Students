@@ -66,5 +66,16 @@ function commentsForPosts(post, comments) {
 console.log("Below is the filtered list for the comments based on their relation");
 console.table(commentsForPosts(post, comments))
 
-console.log('------------------------------------------------------');
+// this is the most use cases for filter, as we use it on the front end to work with client-side data
 
+
+/*
+ Practice Ex # 1
+ return any number greater than 50 in a new array
+ */
+
+var numbers = [15, 25, 35, 45, 55, 65, 75, 85, 95];
+
+var filteredNumbers = numbers.filter(num => num > 50)
+
+console.log(filteredNumbers);
